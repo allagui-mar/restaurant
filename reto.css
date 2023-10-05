@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ 
+header {
+  background-color: #000;
+  color: #fff;
+  height: 180px;
+
+  margin-bottom: 0;
+  }
+h1 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  float: left;
+  padding-left: 5%;
+ 
+}
+/* Styles pour une taille d'écran normale */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+    gap: 30px;
+    float: right;
+    color: #fff;
+    padding-top: 5%;
+    padding-right: 5%;
+    font: 1.5em sans-serif;
+  }
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  /* Requête média pour les écrans de taille spécifique (600px à 900px) */
+  @media screen and (min-width: 500px) and (max-width: 780px) {
+    nav {
+      flex-direction: column; 
+      text-align: center; 
+      float: right;
+    }
+    nav a {
+        display: inline;
+      margin-bottom: 5px; 
+      color:aqua;
+    }
+  }
+  main {
+    height: 100%;
+    width: 100%;
+    margin: 0 ;
+  }
+  .presentation-restaurant{
+    padding: 0;
+    margin: 0;
+  }
+  .presentation{
+   
+     background-image: url(fast-food/cuisine-italienne.jpg);
+     background-size: cover;
+     background-position: center;
+     padding:180px  0px;
+     height: 62vh;
+     margin-top: 0;
+     padding-top: 0;
+     display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   }
+   /*" fonction rotateAndColorChange" pour la rotation et changement de couleur de h2 */
+ @keyframes rotateAndColorChange {
+    0% {
+        transform: rotate(0deg);
+        color: #ff0000; 
+    }
+    33% {
+        color: blue;
+     } 
+     70%  {
+        transform: rotate(270deg);
+        color: #00ff00; 
+    }
+    100% {
+        transform: rotate(360deg);
+        color:yellow; 
+    }
+}
+
+.presentation h2 {
+    
+  font-size: 3rem;
+  animation: rotateAndColorChange 8s infinite; 
+ }
+#pres{ 
+    
+  color: white;
+  background-color: #000;
+  line-height: 1 ;
+  padding: 30px 30px 30px 30px;
+  margin: 0;
+  font-size: 1.5rem;
+}
+  .pizza{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    row-gap: 20px;
+    place-items: center ;
+    padding :30px;
+  }
+  .article{
+    height:600px ;
+    width:320px
+
+  }
+  .article img{
+    display: block;
+    margin: 0;
+    width: 300px;
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;;
+  } 
+  .article img:hover {
+    transform: scale(1.5); /* Zoom de 1.5 fois lorsqu'on survole l'image */
+}
+#menu-jour{
+color: #000;
+ background-color:bisque;
+ margin-top: 0 ;
+}
+#menu-jour h3{
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: gray;
+  padding: 20px;
+  text-align:center ;
+}
+
+#plus,
+#moins {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  color: green;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  
+}
+.moins{
+  float:left
+}
+.quantite{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  margin-bottom: 5px;
+ padding: 5px 5px;;
+  
+}
+#quantite {
+  
+  display:flex;
+  align-items: center;
+  width: 180px; 
+  height: 35px;
+ border:1px solid black;
+ border-radius: 6px;
+ font-size: 18px;
+
+}
+#plus{
+  float: right;
+  color:red; 
+}
+#like{
+  height:40px ;
+  width:40px;
+  border-radius: 6px;
+}
+
+#plus:hover,
+#moins:hover {
+  background-color: #ccc;
+  transform: scale(1.5);
+}
+#supprimer {
+  width: 50%;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+
+  
+}
+#ajouter{
+  width: 58%;
+border-radius: 6px;
+background-color: #00ff00;
+height: 40px;
+margin-top: 5px;
+}
+
+#total {
+  margin-top: 20px;
+}
+#panier {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  scroll-behavior: smooth;
+  
+
+}
+
+#fermer {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.rouge{
+  background-color: #ff0000;
+}
+
+
+  
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: #000;
+  color:#ccc;
+}  
